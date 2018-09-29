@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var app = angular.module('HomeApp', []);
+        app.controller('homeController',function ($scope,$http) {
+            $scope.logout=function(){
+                window.location.href="LoginPage.html"
+            }
+            $scope.ngSpeechRecognition=function(){
+                SpeechRecognition($scope);
+            }
+            $scope.gkg_img="Images/knowledge-graph.jpg";
+            $scope.username=sessionStorage.getItem("FBName");
+            $scope.SearchGoogle=function(){
+                var query = 'https://kgsearch.googleapis.com/v1/entities:search?query='+$scope.txtSearch.replace(' ','+')+'&key=AIzaSyC5YlF6OB7EVbG48qtWsyiYYsySPUlRyug&limit=1&indent=True';
+                $http.get(query).then(function(data) {
+                    console.log(data);
+
+                    $scope.gkg_Name="Name : "+data.data.itemListElement[0].result.name;
+                    $scope.gkg_Description=data.data.itemListElement[0].result.name+" is a/an "+data.data.itemListElement[0].result.description;
+                    $scope.gkg_DetailedDescription=data.data.itemListElement[0].result.detailedDescription.articleBody;
+                    $scope.gkg_img=data.data.itemListElement[0].result.image.contentUrl;
+                })
+            }
+        })
+
+    </script>
+</head>
+<body  ng-app="HomeApp" ng-controller="homeController"  >
+<div style="background-color: midnightblue" class="container-fluid" style="height: 75px">
+    <div class="col-xs-7">
+        <img src="../Images/Logo.gif" class="img-fluid rounded float-left img-responsive" style="height: 130px !important;">
+    </div>
+</div>
+<div class="container">
+    <div class="container row col-xs-11">
+        Welcome <label ng-bind="username"></label>,
+    </div>
+    <div class="col-xs-1 align-bottom">
+        <button class="form-control align-bottom" style="color: white;background-color: midnightblue;margin-top: 30px" ng-click="logout()">Logout</button>
+    </div>
+    <div class="container">
+<img src="../Images/page-under-construction.png" class="img-responsive">
+    </div>
+</div>
+</body>
+</html>
