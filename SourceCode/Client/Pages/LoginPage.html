@@ -12,7 +12,7 @@
         });
     </script>
     <script>
-        var app = angular.module('LoginApp', []);
+        var app = angular.module('LoginApp', ["ngRoute"]);
         app.controller('FBcontroller',function ($scope,$http) {
 
             $scope.FbLogin = function () {

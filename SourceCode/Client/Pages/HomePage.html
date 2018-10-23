@@ -22,6 +22,11 @@
         }
     </style>
     <script>
+        function preback(){(window.history.forward());}
+        setTimeout("preback()",0)
+        window.onunload=function () {
+            null
+        };
         var app = angular.module('HomeApp', []);
         app.run(function ($http) {
             // Sends this header with any AJAX request
