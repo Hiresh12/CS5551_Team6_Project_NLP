@@ -7,6 +7,7 @@ var cors = require('cors');
 const db = require('mongoose');
 
 let questions = require('./model/questions');
+let answers = require('./model/answers');
 let db_promise = db.connect('mongodb://anvesh12:anvesh12@ds137703.mlab.com:37703/nlp_database');
 db_promise.then((result)=>{
     console.log("DB connection is established !");
@@ -27,8 +28,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 
+require('./routes/answers')(app,db);
+
 //rest API
 require('./routes/questions')(app, db);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,13 +1,13 @@
 module.exports = function (app, db) {
     let question_details = db.model('questions');
     app.get('/questions/search',(req,res)=>{
-        question_details.find({}).exec((err, students) => {
+        question_details.find({}).exec((err, questions) => {
             if (!err) {
                 res.send({
                     result: "Success",
-                    data: students
+                    data: questions
                 });
-                console.log(students);
+                console.log(questions);
             } else {
                 res.send({
                     result: "Failure",

@@ -9,6 +9,18 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <!--Speech to text functionality has been implemented-->
+    <style>
+        input[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
     <script>
         var app = angular.module('HomeApp', []);
         app.run(function ($http) {
@@ -26,6 +38,29 @@
                 $scope.response = data.data.data;
                 console.log(data);
             });
+            $scope.Evaluate=function(qId){
+                $scope.answerDesc = document.getElementById("answers-"+qId).value;
+                console.log($scope.answerDesc);
+                console.log(qId);
+                var dataParams = {
+                    'userId':'Anvesh',
+                   'questionId' : qId,
+                    'answer' : $scope.answerDesc,
+                };
+                console.log(dataParams);
+                var config = {
+                    headers : {
+                        'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
+                    }
+                }
+                var req = $http.post('http://127.0.0.1:3000/answers/create',dataParams)
+                    .then(function(data, status, headers, config) {
+                    $scope.message = data;
+                    console.log(data);
+                    alert("Details are saved Successfully saved in MongoDB");
+                });
+
+            }
         })
 
     </script>
@@ -35,15 +70,20 @@
     <div class="col-xs-7">
         <img src="../Images/Logo.gif" class="img-fluid rounded float-left img-responsive" style="height: 130px !important;">
     </div>
+    <div class="col-xs-1 align-left" style="float: right">
+        <button class="form-control align-bottom" style="color: white;background-color: midnightblue;margin-top: 30px" ng-click="logout()">Logout</button>
+    </div>
 </div>
 <div class="container">
-    <!--<div class="col-xs-1 align-bottom">
-        <button class="form-control align-bottom" style="color: white;background-color: midnightblue;margin-top: 30px" ng-click="logout()">Logout</button>
-    </div>-->
+
+    <h2 align="center">Enter Your Answers for below Questions</h2>
     <div ng-repeat="data in response">
-        Question : {{data.questions.question_desc}}
-        <input type="text" style="width:100%" id="answer" name="answer" placeholder="Enter your Answer" required>
-        <input type="submit" value="submit">
+        <form class="container" style="align-self: center;height:100%;width: 100%; background-color: white">
+            <p style="font-size: 200%">Question{{data.questions.question_id}} : {{data.questions.question_desc}}</p>
+        <input type="text" id="answers-{{data.questions.question_id}}" style="width:100%;height: 50px"
+               name="answer" placeholder="Enter your Answer" required>
+        <input type="submit" value="Evaluate" ng-click="Evaluate(data.questions.question_id)">
+        </form>
     </div>
 </div>
 </body>
