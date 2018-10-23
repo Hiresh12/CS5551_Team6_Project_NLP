@@ -126,20 +126,19 @@
 <body  ng-app="HomeApp" ng-controller="homeController"  >
 <div style="background-color: midnightblue" class="container-fluid" style="height: 15px">
     <div class="col-xs-1">
-        <img src="../Images/Logo.gif" class="img-fluid rounded float-left img-responsive" style="height: 65px !important;">
+        <img src="../Images/Logo.gif" class="img-fluid rounded float-left img-responsive" style="height: 75px !important;">
     </div>
     <div class="tab" style="float: left">
         <button class="tablinks" href="#Home" onclick="projectNlp(event,'Home')">Home</button>
-        <button href="#About tablinks" onclick="projectNlp(event,'AboutProject')">About</button>
+        <button href="#About tablinks" onclick="projectNlp(event,'About')">About</button>
         <button href="#Contact tablinks" onclick="projectNlp(event,'Contact')">Contact</button>
-
     </div>
     <div class="col-xs-1 align-left" style="float: right">
         <button class="form-control align-bottom" style="color: white;background-color: midnightblue;margin-top: 30px" ng-click="logout()">Logout</button>
     </div>
 </div>
+<div id="Home" style="width: 100%" align="center" class="tabcontent">
 <div class="container">
-
     <h2 align="center">Enter Your Answers for below Questions</h2>
     <div ng-repeat="data in response">
         <form class="container" style="align-self: center;height:100%;width: 100%; background-color: white">
@@ -149,6 +148,26 @@
         <input type="submit" value="Evaluate" ng-click="Evaluate(data.questions.question_id)">
         </form>
     </div>
+</div>
+</div>
+    <div id="Contact" style="width: 100%" align="center" class="tabcontent">
+    <h1 align="center">Team Details</h1>
+    </div>
+<div id="About" style="width: 100%" align="center" class="tabcontent">
+    <h1 align="center">Answer Evaluation Project</h1>
+    <h2 align="left"><strong>Motivation:</strong></h2>
+    <p align="left" style="font-size: 35px">To develop a web application for evaluating user’s answers for a set of questions
+        using Natural Language Processing</p>
+    <h2 align="left"><strong>Goals and Objectives:</strong></h2>
+    <ul>
+        <li align="left" style="font-size: 35px">Develop an application that help users who wants to prepare for competitive
+            exam, interview etc</li>
+        <li align="left" style="font-size: 35px">Giving suggestion to the user based on the answer key so that user can learn new
+            things about the topics</li>
+        <li align="left" style="font-size: 35px">Integrate machine learning into the software for text analysis and matching the
+            analyzed text with answer key to evaluate the answers</li>
+        <li align="left" style="font-size: 35px">System will also check for grammar error in the text</li>
+    </ul>
 </div>
 <div class="footer">
     <p>A NLP Project by Team6</p>
