@@ -20,6 +20,46 @@
             border-radius: 4px;
             cursor: pointer;
         }
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            background-color: midnightblue;
+        }
+        /* Style the buttons inside the tab */
+        .tab button {
+            background-color: midnightblue;
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 20px 20px;
+            transition: 0.3s;
+            font-size: 20px;
+        }
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+            color: black;
+            font-size: 25px;
+        }
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border-top: none;
+        }
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height:25px;
+            background-color: midnightblue;
+            color: white;
+            text-align: center;
+            font-size: 150%;
+        }
     </style>
     <script>
         function preback(){(window.history.forward());}
@@ -27,6 +67,19 @@
         window.onunload=function () {
             null
         };
+        function projectNlp(evt, formDisp) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(formDisp).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
         var app = angular.module('HomeApp', []);
         app.run(function ($http) {
             // Sends this header with any AJAX request
@@ -71,9 +124,15 @@
     </script>
 </head>
 <body  ng-app="HomeApp" ng-controller="homeController"  >
-<div style="background-color: midnightblue" class="container-fluid" style="height: 75px">
-    <div class="col-xs-7">
-        <img src="../Images/Logo.gif" class="img-fluid rounded float-left img-responsive" style="height: 130px !important;">
+<div style="background-color: midnightblue" class="container-fluid" style="height: 15px">
+    <div class="col-xs-1">
+        <img src="../Images/Logo.gif" class="img-fluid rounded float-left img-responsive" style="height: 65px !important;">
+    </div>
+    <div class="tab" style="float: left">
+        <button class="tablinks" href="#Home" onclick="projectNlp(event,'Home')">Home</button>
+        <button href="#About tablinks" onclick="projectNlp(event,'AboutProject')">About</button>
+        <button href="#Contact tablinks" onclick="projectNlp(event,'Contact')">Contact</button>
+
     </div>
     <div class="col-xs-1 align-left" style="float: right">
         <button class="form-control align-bottom" style="color: white;background-color: midnightblue;margin-top: 30px" ng-click="logout()">Logout</button>
@@ -90,6 +149,9 @@
         <input type="submit" value="Evaluate" ng-click="Evaluate(data.questions.question_id)">
         </form>
     </div>
+</div>
+<div class="footer">
+    <p>A NLP Project by Team6</p>
 </div>
 </body>
 </html>
