@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <title>Title</title>
     <!--Speech to text functionality has been implemented-->
@@ -62,11 +64,26 @@
         }
     </style>
     <script>
+        $(document).ready(function(){
+            document.getElementById('progressbar').style.width='60%';
+            document.getElementById('progressbar').innerText='60% correct';
+
+        });
         function preback(){(window.history.forward());}
         setTimeout("preback()",0)
         window.onunload=function () {
             null
         };
+       /* var refreshIntervalId=setInterval(function () {
+            var a = document.getElementById("progress-bar").style.width;
+            var res = a.substring(0,(a.length)-1);
+            res=eval(res)+10;
+            document.getElementById("progress-bar").style.width=res+"%";
+            document.getElementById("progress-bar").innerHTML=res+"%";
+            if(eval(res)>90){
+                clearInterval(refreshIntervalId)
+            }
+        });*/
         function projectNlp(evt, formDisp) {
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tabcontent");
@@ -138,11 +155,19 @@
     </div>
 </div>
 <div id="Home" style="width: 100%" align="center" class="tabcontent">
+    <br>
+    <br>
 <div class="container">
+    <div class="progress" id="progress">
+        <div class="progress-bar progress-bar-info" id="progressbar" role="progressbar"
+             aria-valuemin="0" aria-valuemax="100">
+        </div>
+    </div>
+
     <h2 align="center">Enter Your Answers for below Questions</h2>
     <div ng-repeat="data in response">
         <form class="container" style="align-self: center;height:100%;width: 100%; background-color: white">
-            <p style="font-size: 200%">Question{{data.questions.question_id}} : {{data.questions.question_desc}}</p>
+            <p style="font-size: 200%">Question {{data.questions.question_id}} : {{data.questions.question_desc}}</p>
         <input type="text" id="answers-{{data.questions.question_id}}" style="width:100%;height: 50px"
                name="answer" placeholder="Enter your Answer" required>
         <input type="submit" value="Evaluate" ng-click="Evaluate(data.questions.question_id)">
@@ -169,6 +194,7 @@
         <li align="left" style="font-size: 35px">System will also check for grammar error in the text</li>
     </ul>
 </div>
+
 <div class="footer">
     <p>A NLP Project by Team6</p>
 </div>
