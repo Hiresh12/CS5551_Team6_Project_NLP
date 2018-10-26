@@ -26,8 +26,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-let questions = require('./model/questions');
-let answers = require('./model/answers');
+
 var url = 'mongodb://anvesh12:anvesh12@ds137703.mlab.com:37703/nlp_database';
 
 app.post('/enroll', function (req, res) {

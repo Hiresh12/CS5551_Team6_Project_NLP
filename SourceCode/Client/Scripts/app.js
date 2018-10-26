@@ -57,7 +57,8 @@ myapp.controller('MongoRestController',function($scope,$http,$window){
                 .then(function(data, status, headers, config) {
                     // $scope.message = data;
                     console.log("here "+data);
-                    $window.location.href = 'HomePage.html';
+                    $window.location.href = 'LoginPage.html';
+                    alert('Registartion Successful Please Login');
                 });
         };
 
