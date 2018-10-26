@@ -11,6 +11,8 @@
     <script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular-sanitize.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script>
+        var records;
+        var qId=[];
         function meanStack(evt, formDisp) {
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tabcontent");
@@ -31,13 +33,10 @@
             // Send this header only in post requests. Specifies you are sending a JSON object
             $http.defaults.headers.post['dataType'] = 'json'
         });
-        var records;
-        var qId=[];
-
         myapp.controller('homeController',function($scope,$http){
+            //capturing and inserting data to mongodb by Http Post
             $scope.insertData = function(){
                 console.log($scope.question);
-
                 var dataParams = {
                     'question_id': Math.max.apply(null, qId)+1,
                     'question'  : $scope.question,
@@ -64,16 +63,9 @@
                 req.error(function(data, status, headers, config) {
                     alert( "failure message: " + JSON.stringify({data: data}));
                 });
-                // var request=$http.get('http://127.0.0.1:3000/questions/search');
-                // request.success(function(data, status, headers, config) {
-                //     $scope.response = data.data;
-                //     console.log(data);
-                // });
-                // request.error(function(data, status, headers, config) {
-                //     alert( "failure message: " + JSON.stringify({data: data}));
-                // });
                 $scope.init();
             };
+            //Http get call on initilazation/loading of the page
             $scope.init = function () {
                 var request=$http.get('http://127.0.0.1:3000/questions/search');
 
@@ -82,15 +74,23 @@
                     console.log(data);
                     records = data;
                     console.log(records.length);
-                    for(var i=0; i<records.length; i++){
-                        qId.push(records[i].question_id);
+                    //logic to get unique id for the question_id
+                    if (records.length==0){
+                        var q = records.question_id;
+                        q=0;
+                        qId.push(q);
+                    }else{
+                        for(var i=0; i<records.length; i++){
+                            qId.push(records[i].question_id);
+                        }
+                        console.log(qId);
                     }
-                    console.log(qId);
                 });
                 request.error(function(data, status, headers, config) {
                     alert( "failure message: " + JSON.stringify({data: data}));
                 });
             }
+            //logout functionality
             $scope.logout=function() {
                 window.location.href="AdminLogin.html";
             }
@@ -125,10 +125,10 @@
                        placeholder="Enter a Key" ng-model="key2" required >
                 <label for="key3" style="color: white"><b>key-3</b></label>
                 <input type="text" id="key3" name="key3"
-                       placeholder="Enter a Key" ng-model="key3" required >
+                       placeholder="Enter a Key" ng-model="key3" >
                 <label for="key4" style="color: white"><b>key-4</b></label>
                 <input type="text" id="key4" name="key4"
-                       placeholder="Enter a Key" ng-model="key4" required >
+                       placeholder="Enter a Key" ng-model="key4" >
                 <label for="Answer" style="color: white"><b>Answer</b></label>
                 <input type="text" id="answer" name="answer"
                        placeholder="Enter Answer" ng-model="answer" required >
