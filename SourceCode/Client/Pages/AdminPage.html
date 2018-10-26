@@ -91,21 +91,25 @@
                     alert( "failure message: " + JSON.stringify({data: data}));
                 });
             }
+            $scope.logout=function() {
+                window.location.href="AdminLogin.html";
+            }
         });
     </script>
-
 </head>
 <body>
-<h1 style="text-align: center; background-color: white"><i class="material-icons" style="font-size:25px; color:black">border_color</i>Class ID 12!1</h1>
-
+<h1 class="jumbotron" style="text-align: center; background-color: white"><i class="material-icons">question_answer</i>&nbsp;&nbsp;Question and Answers</h1>
+<div class="col-xs-1 align-left" style="float: right">
+    <button class="form-control align-bottom" style="color: white;background-color: black;margin-top: 30px" ng-click="logout()">Logout</button>
+</div>
 <div  class="row">
-    <div class="col-lg-4" style="background-color:lavender;">
+    <div class="col-lg-2" style="background-color:lavender;">
         <div class="tab" >
-            <button class="tablinks" href="#Create" onclick="meanStack(event,'Create')"><i class="fa fa-fw fa-user"></i>Questions</button>
-            <button href="#Fetch tablinks" onclick="meanStack(event,'Fetch')"><i class="fa fa-fw fa-search"></i>Search Questions</button>
+            <button class="tablinks" href="#Create" onclick="meanStack(event,'Create')"><i class="material-icons">keyboard_tab</i>&nbsp;&nbsp;Ask a Question??</button>
+            <button href="#Fetch tablinks" onclick="meanStack(event,'Fetch')"><i class="fa fa-fw fa-search"></i>&nbsp;&nbsp;Search/Add a Question</button>
         </div>
     </div>
-    <div class="col-lg-6" >
+    <div class="col-lg-10" >
         <div id="Create" style="width: 100%" align="center" class="tabcontent">
             <h2>Ask a Question??</h2>
             <form class="container" style="width: 50%; background-color: #151515"

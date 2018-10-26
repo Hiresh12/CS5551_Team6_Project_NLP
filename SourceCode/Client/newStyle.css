@@ -59,7 +59,9 @@ input[type=text], select {
     border-radius: 4px;
     box-sizing: border-box;
 }
-
+.jumbotron {
+    height: 0%;
+}
 input[type=submit] {
     width: 100%;
     background-color: #4CAF50;
