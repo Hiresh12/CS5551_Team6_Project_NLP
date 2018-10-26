@@ -4,7 +4,6 @@ module.exports = function(app) {
     //var url = 'https://api.wunderground.com/api/36b799dc821d5836/hourly/q/MO/kansas%20city.json';
     app.post('/hiresh/nlp', function(req, res) {
         console.log(req.query);
-        console.log('1');
         res.contentType("application/json");
        request.post({
                url: query,

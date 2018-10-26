@@ -26,6 +26,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
+//Rest API's
+require('./controllers/external/index')(app);
 
 var url = 'mongodb://anvesh12:anvesh12@ds137703.mlab.com:37703/nlp_database';
 
