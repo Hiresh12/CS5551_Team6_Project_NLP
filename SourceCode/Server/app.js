@@ -114,6 +114,31 @@ app.get('/questions/search', function (req, res) {
     });
 });
 
+app.post('/questions/create', function (req, res) {
+    MongoClient.connect(url, function (err, client) {
+        if (err) {
+            res.write("Failed, Error while cosnnecting to Database");
+            res.end();
+        }
+        var db = client.db();
+        insertQuestionDetails(db, req.body, function () {
+            res.write("Successfully inserted");
+            res.end();
+        });
+    });
+});
+var insertQuestionDetails = function (db, data, callback) {
+    db.collection('questions').insertOne(data, function (err, result) {
+        if (err) {
+            res.write("Document insertion is failed");
+            res.end();
+        }
+        console.log("Inserted a document into the Answers collection.");
+        callback();
+    });
+};
+
+
 // catch 404 and forward to error handler
     app.use(function (req, res, next) {
         next(createError(404));

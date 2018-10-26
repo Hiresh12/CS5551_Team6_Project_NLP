@@ -165,7 +165,7 @@
     <h2 align="center">Enter Your Answers for below Questions</h2>
     <div ng-repeat="data in response">
         <form class="container" style="align-self: center;height:100%;width: 100%; background-color: white">
-            <p style="font-size: 200%">Question {{data.questions.question_id}} : {{data.questions.question_desc}}</p>
+            <p style="font-size: 200%">Question {{data.question_id}} : {{data.question}}</p>
         <input type="text" id="answers-{{data.questions.question_id}}" style="width:100%;height: 50px"
                name="answer" placeholder="Enter your Answer" required>
         <input type="submit" value="Evaluate" ng-click="Evaluate(data.questions.question_id)">
