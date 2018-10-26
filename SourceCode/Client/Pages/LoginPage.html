@@ -13,36 +13,6 @@
     </script>
     <script>
         var app = angular.module('LoginApp', ["ngRoute"]);
-        app.controller('FBcontroller',function ($scope,$http) {
-
-            $scope.FbLogin = function () {
-                FB.login(function(response){
-                        if(response.authResponse) (
-                            FB.api('/me','GET',{fields:'email,first_name,name,id'},function(response){
-                                sessionStorage.FBName=response.name.toString();
-                                window.location.href = "HomePage.html";
-                            })
-                        )
-                    },
-                    {scope:'email',return_scope:true}
-                )
-            }
-            $scope.AppLogin=function(){
-                var status=CheckUser($scope);
-                if(status=="valid"){
-                    window.location.href="HomePage.html";
-                }
-                else if(status=="invalid"){
-                    alert("Password is Incorrect");
-                }
-                else if(status=="nouser"){
-                    alert('User is not registered');
-                }
-                else{
-                    alert(status);
-                }
-            }
-        });
         app.controller('Signupcontroller',function ($scope,$http){
             $scope.CreateUser=function() {
                 var Name="";var username="";var password="";var confirmpassword="";
@@ -110,7 +80,7 @@
                     <td><input  class="form-control" style="color: whitesmoke;background-color: midnightblue" type="password" ng-model="txtPassword"></td>
                 </tr>
                     <tr>
-                        <td colspan="2"><button  class="form-control" style="color: white;background-color: midnightblue" ng-click="AppLogin()"><strong>Login</strong></button></td>
+                        <td colspan="2"><button  class="form-control" style="color: white;background-color: midnightblue" ng-click="getDbData()"><strong>Login</strong></button></td>
                     </tr>
             <tr>
                 <td>

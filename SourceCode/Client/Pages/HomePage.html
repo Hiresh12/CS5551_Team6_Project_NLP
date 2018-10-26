@@ -10,7 +10,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <title>Title</title>
-    <!--Speech to text functionality has been implemented-->
     <style>
         input[type=submit] {
             width: 100%;
@@ -74,16 +73,6 @@
         window.onunload=function () {
             null
         };
-       /* var refreshIntervalId=setInterval(function () {
-            var a = document.getElementById("progress-bar").style.width;
-            var res = a.substring(0,(a.length)-1);
-            res=eval(res)+10;
-            document.getElementById("progress-bar").style.width=res+"%";
-            document.getElementById("progress-bar").innerHTML=res+"%";
-            if(eval(res)>90){
-                clearInterval(refreshIntervalId)
-            }
-        });*/
         function projectNlp(evt, formDisp) {
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tabcontent");
@@ -108,17 +97,24 @@
             $scope.logout=function(){
                 window.location.href="LoginPage.html"
             }
+            var name = sessionStorage.getItem("name");
+            if(name!=null && name!=''){
+                $scope.name = name;
+            }else{
+                window.location.href="LoginPage.html"
+            }
             var query='http://127.0.0.1:3000/questions/search'
             $http.get(query).then(function(data) {
-                $scope.response = data.data.data;
+                $scope.response = data.data;
                 console.log(data);
             });
+            $scope.userName = sessionStorage.getItem("username")
             $scope.Evaluate=function(qId){
                 $scope.answerDesc = document.getElementById("answers-"+qId).value;
                 console.log($scope.answerDesc);
                 console.log(qId);
                 var dataParams = {
-                    'userId':'Anvesh',
+                    'userId':$scope.userName,
                    'questionId' : qId,
                     'answer' : $scope.answerDesc,
                 };
@@ -137,7 +133,6 @@
 
             }
         })
-
     </script>
 </head>
 <body  ng-app="HomeApp" ng-controller="homeController"  >
@@ -155,6 +150,9 @@
     </div>
 </div>
 <div id="Home" style="width: 100%" align="center" class="tabcontent">
+    <div id="container row col-xs-11" style="float: left;font-size: 30px">
+        Welcome <label ng-bind="name"></label>
+    </div>
     <br>
     <br>
 <div class="container">

@@ -38,7 +38,42 @@ function CheckUser(scope)
 
 var loginApp = angular.module('LoginApp', []);
 loginApp.controller('FBcontroller',function ($scope,$http) {
+    $scope.getDbData = function(){
+        console.log("Value is ZZZZZZZZZ "+$scope.txtUsername);
+        var config = {
+            headers : {
+                'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
+            }
+        }
+        $http.get('http://127.0.0.1:3000/getData?keywords=' + $scope.txtUsername).then(function (d) {
+                console.log(d);
+                console.log("length is " + d.data.length);
+                if (d.data.length != 0) {
+                    var document = [];
+                    for (i = 0; i < d.data.length; i++) {
+                        if (d.data[i].password == $scope.txtPassword) {
+                            console.log("matched");
+                            sessionStorage.setItem("username",d.data[i].uaername);
+                            sessionStorage.setItem("name",d.data[i].name);
+                            window.location.href="HomePage.html";
+                        }
+                        else {
+                            alert("Password is Incorrect Please Enter Valid Password");
+                        }
+                        document.push(new Array(d.data[i].username + '-' + d.data[i].password));
+                    }
+                    console.log("document is " + document);
+                }
+                else {
 
+                    console.log("Username is not available");
+                }
+            }, function (err) {
+                console.log(err);
+            }
+        )
+
+    };
     $scope.FbLogin = function () {
         FB.login(function(response){
                 if(response.authResponse) (
