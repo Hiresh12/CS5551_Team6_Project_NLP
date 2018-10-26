@@ -110,6 +110,7 @@
             });
             $scope.userName = sessionStorage.getItem("username")
             $scope.Evaluate=function(qId){
+
                 $scope.answerDesc = document.getElementById("answers-"+qId).value;
                 console.log($scope.answerDesc);
                 console.log(qId);
@@ -166,9 +167,9 @@
     <div ng-repeat="data in response">
         <form class="container" style="align-self: center;height:100%;width: 100%; background-color: white">
             <p style="font-size: 200%">Question {{data.question_id}} : {{data.question}}</p>
-        <input type="text" id="answers-{{data.questions.question_id}}" style="width:100%;height: 50px"
+        <input type="text" id="answers-{{data.question_id}}" style="width:100%;height: 50px"
                name="answer" placeholder="Enter your Answer" required>
-        <input type="submit" value="Evaluate" ng-click="Evaluate(data.questions.question_id)">
+        <input type="submit" value="Evaluate" ng-click="Evaluate(data.question_id)">
         </form>
     </div>
 </div>

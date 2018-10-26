@@ -28,9 +28,6 @@ window.fbAsyncInit = function() {
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-
-
-
 /**
  * Created by user on 23/10/2016.
  */
