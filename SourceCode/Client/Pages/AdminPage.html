@@ -64,14 +64,15 @@
                 req.error(function(data, status, headers, config) {
                     alert( "failure message: " + JSON.stringify({data: data}));
                 });
-                var request=$http.get('http://127.0.0.1:3000/questions/search');
-                request.success(function(data, status, headers, config) {
-                    $scope.response = data.data;
-                    console.log(data);
-                });
-                request.error(function(data, status, headers, config) {
-                    alert( "failure message: " + JSON.stringify({data: data}));
-                });
+                // var request=$http.get('http://127.0.0.1:3000/questions/search');
+                // request.success(function(data, status, headers, config) {
+                //     $scope.response = data.data;
+                //     console.log(data);
+                // });
+                // request.error(function(data, status, headers, config) {
+                //     alert( "failure message: " + JSON.stringify({data: data}));
+                // });
+                $scope.init();
             };
             $scope.init = function () {
                 var request=$http.get('http://127.0.0.1:3000/questions/search');
@@ -82,7 +83,7 @@
                     records = data;
                     console.log(records.length);
                     for(var i=0; i<records.length; i++){
-                        qId.push(records[i].questions.question_id);
+                        qId.push(records[i].question_id);
                     }
                     console.log(qId);
                 });

@@ -117,7 +117,7 @@ app.get('/questions/search', function (req, res) {
 app.post('/questions/create', function (req, res) {
     MongoClient.connect(url, function (err, client) {
         if (err) {
-            res.write("Failed, Error while cosnnecting to Database");
+            res.write("Failed, Error while connecting to Database");
             res.end();
         }
         var db = client.db();
