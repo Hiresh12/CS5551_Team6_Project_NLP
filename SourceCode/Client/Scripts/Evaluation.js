@@ -15,6 +15,7 @@ var textAnalyze = function($scope,$http,qid) {
     var query='https://api.mlab.com/api/1/databases/nlp_database/collections/questions?apiKey=lSMpIYO_9GB-Gnslwjb-KPeyA4fc4hxb';
     $http.get(query+'&q={"question_id":'+qid+'}').then(function(data){
         console.log(data);
+        console.log('check');
         Question=data.data[0];
         AnswerEval($scope,$http,qid);
     });
@@ -60,17 +61,23 @@ function AnswerEval($scope,$http,qid){
           OR LOWER(student.lemma) = keywords.b WHERE student.text.content IS NOT NULL AND keywords.b IS NULL',
             [student, keywords]);
 
-        //console.log('check');
-        //console.log(ansNotinKey);
-        for(var i=0;i<keyNotinAns.length;i++) {
-            if (i == keyNotinAns.length - 1) {
-                console.log('a')
-                CallAPI(i, keyNotinAns[i], $http, 'end');
+        console.log('check');
+        console.log(keyNotinAns);
+        if(keyNotinAns.length>0) {
+            for (var i = 0; i < keyNotinAns.length; i++) {
+                if (i == keyNotinAns.length - 1) {
+                    console.log('a')
+                    CallAPI(i, keyNotinAns[i], $http, 'end');
+                }
+                else {
+                    console.log('b')
+                    CallAPI(i, keyNotinAns[i], $http, 'no end');
+                }
             }
-            else {
-                console.log('b')
-                CallAPI(i,keyNotinAns[i],$http,'no end');
-            }
+        }
+        else
+        {
+            Display();
         }
         /*for(var i=0;i<ansNotinKey.length;i++)
         {
@@ -123,6 +130,7 @@ function AnswerEval($scope,$http,qid){
     function Display(){
         //console.log(synonyms);
         //console.log(ansNotinKey);
+        console.log('display');
         for(var i=0;i<keyNotinAns.length && keyNotinAns.length>0;i++) {
             //console.log('bbb'+synonyms.synonyms[keyNotinAns[i]]);
             if(synonyms.synonyms[keyNotinAns[i]] !=undefined) {
@@ -181,7 +189,7 @@ function AnswerEval($scope,$http,qid){
             $('.progress-bar-info').css('background-color', 'red');;
         }
         $('#txtanswer').text(useranswer);
-        document.getElementById('progressbar').style.width=score+'%';
+        document.getElementById('progressbar').style.width=(score==0?2:score)+'%';
         document.getElementById('progressbar').innerText=(score+'% correct');
         //  document.getElementById('progress').css('border','1px solid');
         document.getElementById('getAnswer').click();
