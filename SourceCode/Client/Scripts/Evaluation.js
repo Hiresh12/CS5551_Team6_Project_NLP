@@ -1,5 +1,5 @@
 var student;var tutor;var keyword;var keys='';var keywords;var result;var keyNotinAns;var ansNotinKey;
-    var foundinAns;
+    var foundinAns;var useranswer;
     var synonyms={
         synonyms:{}
     };
@@ -20,8 +20,9 @@ var textAnalyze = function($scope,$http,qid) {
     });
 }
 function AnswerEval($scope,$http,qid){
+    useranswer=document.getElementById("answers-"+qid).value;
     var query = 'http://localhost:3000/hiresh/nlp?text='
-    $http.post(query+ document.getElementById("answers-"+qid).value).then(function (data) {
+    $http.post(query+ useranswer).then(function (data) {
         student =data;
         $http.post(query+ Question.answer).then(function (data) {
             //console.log(data);
@@ -39,20 +40,20 @@ function AnswerEval($scope,$http,qid){
          FROM ? AS keywords JOIN ? AS tutor ON LOWER(keywords.key) LIKE "%"+'+'LOWER(tutor.text.content)'+'+"%"\
          OR " "+'+'LOWER(keywords.key)'+'+" " LIKE "% "+'+'LOWER(tutor.lemma)'+'+" %"',
             [Question.keywords,tutor]);
-        //console.log(keywords);
+        console.log(keywords);
         //console.log(student);
         result = alasql('SELECT student.text.content as ans,keywords.a as key,keywords.d as score \
          FROM ? AS student JOIN ? AS keywords ON LOWER(student.text.content) = keywords.b\
          OR LOWER(student.lemma) = keywords.b',
             [student, keywords]);
-        console.log(result);
+        //console.log(result);
 
         keyNotinAns = alasql('COLUMN OF SELECT keywords.b \
          FROM ? AS student RIGHT JOIN ? AS keywords ON LOWER(student.text.content) = LOWER(keywords.b)\
           OR LOWER(student.lemma) = keywords.b WHERE student.text.content IS NULL AND keywords.b IS NOT NULL',
             [student, keywords]);
-       /* console.log(keywords);
-        console.log(keyNotinAns)*/
+       //console.log(keywords);
+        console.log(keyNotinAns)
 
         ansNotinKey = alasql('SELECT student.text.content as a,student.lemma as lemma \
          FROM ? AS student LEFT JOIN ? AS keywords ON LOWER(student.text.content) = LOWER(keywords.b)\
@@ -63,9 +64,11 @@ function AnswerEval($scope,$http,qid){
         //console.log(ansNotinKey);
         for(var i=0;i<keyNotinAns.length;i++) {
             if (i == keyNotinAns.length - 1) {
+                console.log('a')
                 CallAPI(i, keyNotinAns[i], $http, 'end');
             }
             else {
+                console.log('b')
                 CallAPI(i,keyNotinAns[i],$http,'no end');
             }
         }
@@ -110,25 +113,35 @@ function AnswerEval($scope,$http,qid){
             if(isEnd=="end"){
                 Display();
             }
-        });
+        })
+            .catch(function (err) {
+                if(isEnd=="end"){
+                    Display();
+                }
+            });
     }
     function Display(){
         //console.log(synonyms);
         //console.log(ansNotinKey);
         for(var i=0;i<keyNotinAns.length && keyNotinAns.length>0;i++) {
-            foundinAns =alasql('SELECT DISTINCT synonyms._ as a,"'+keyNotinAns[i]+'" as b,ansNotinKey.a as ans,ansNotinKey.lemma as lemma \
-         FROM ? AS synonyms JOIN ? AS ansNotinKey ON LOWER(synonyms._) LIKE "%"+'+'LOWER(ansNotinKey.a)'+'+"%" \
-         OR LOWER(synonyms._) =LOWER(ansNotinKey.lemma)',
-                [synonyms.synonyms[keyNotinAns[i]],ansNotinKey]);
-            for(var j=0;j<foundinAns.length;j++){
-                if(keyNotinAns.length>0) {
-                    //console.log(foundinAns[i].b);
-                    var index = keyNotinAns.indexOf(foundinAns[i].b);
-                    //console.log(keyNotinAns);
-                    //console.log(index);
-                    if (index >= 0) {
-                        i = i - 1;
-                        keyNotinAns.splice(index, 1);
+            //console.log('bbb'+synonyms.synonyms[keyNotinAns[i]]);
+            if(synonyms.synonyms[keyNotinAns[i]] !=undefined) {
+                foundinAns = alasql('SELECT DISTINCT synonyms._ as a,"' + keyNotinAns[i] + '" as b,ansNotinKey.a as ans,ansNotinKey.lemma as lemma \
+         FROM ? AS synonyms JOIN ? AS ansNotinKey ON LOWER(synonyms._) LIKE "%"+' + 'LOWER(ansNotinKey.a)' + '+"%" \
+         OR LOWER(synonyms._) =LOWER(ansNotinKey.lemma)\
+         WHERE LENGTH(ansNotinKey.a)>1',
+                    [synonyms.synonyms[keyNotinAns[i]], ansNotinKey]);
+                console.log(foundinAns);
+                for (var j = 0; j < foundinAns.length; j++) {
+                    if (keyNotinAns.length > 0) {
+                        //console.log('aaa'+foundinAns[j].b);
+                        var index = keyNotinAns.indexOf(foundinAns[j].b);
+                        console.log('remove '+keyNotinAns[index]);
+                        //console.log(index);
+                        if (index >= 0) {
+                            i = i - 1;
+                            keyNotinAns.splice(index, 1);
+                        }
                     }
                 }
             }
@@ -153,14 +166,23 @@ function AnswerEval($scope,$http,qid){
          join ? keygrp on Keywords.a=keygrp.a',
             [keywords,keyNotinAns,keywordsgroup]);
         var score=10;
+        console.log(missingKeys);
         for(var i=0;i<missingKeys.length;i++){
             score=score-(missingKeys[i].score/missingKeys[i]['count']);
         }
         score=score*10;
         //console.log(score);
         //console.log(Question.answer);
-        $('#txtanswer').text(Question.answer);
+        if(score>50){
+            $('.progress-bar-info').css('background-color', 'green');;
+        }
+        else
+        {
+            $('.progress-bar-info').css('background-color', 'red');;
+        }
+        $('#txtanswer').text(useranswer);
         document.getElementById('progressbar').style.width=score+'%';
-        document.getElementById('progressbar').innerText=score+'% correct';
+        document.getElementById('progressbar').innerText=(score+'% correct');
+        //  document.getElementById('progress').css('border','1px solid');
         document.getElementById('getAnswer').click();
     }
