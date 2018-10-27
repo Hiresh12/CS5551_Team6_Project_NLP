@@ -96,6 +96,7 @@
             $http.defaults.headers.post['dataType'] = 'json'
         });
         app.controller('homeController',function ($scope,$http) {
+            document.getElementById('btnHome').click();
             $scope.logout=function(){
                 window.location.href="LoginPage.html"
             }
@@ -113,7 +114,7 @@
             $scope.userName = sessionStorage.getItem("username")
             $scope.Evaluate=function(qId){
                 textAnalyze($scope,$http,qId);
-               /* $scope.answerDesc = document.getElementById("answers-"+qId).value;
+                $scope.answerDesc = document.getElementById("answers-"+qId).value;
                 console.log($scope.answerDesc);
                 console.log(qId);
                 var dataParams = {
@@ -131,20 +132,50 @@
                     .then(function(data, status, headers, config) {
                     $scope.message = data;
                     console.log(data);
-                    alert("Details are saved Successfully saved in MongoDB");
-                });*/
+                    //alert("Details are saved Successfully saved in MongoDB");
+                });
 
             }
         })
     </script>
 </head>
 <body  ng-app="HomeApp" ng-controller="homeController"  >
+
+<div align="center" id="myModal" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     style="height: 60%;width: 50%;background-color: whitesmoke;display: none;margin-left: 25%;margin-top: 8%;padding-left: 17px;">
+    <div class="modal-dialog modal-dialog-centered">
+        <table align="center" class="table borderless" style="width: 50%">
+            <tr>
+                <td>
+                   <label id="txtanswer">Hi</label>
+                    <button style="display: none"  type="button" id="getAnswer" data-toggle="modal" data-target="#myModal">
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="progress" id="progress">
+                        <div class="progress-bar progress-bar-info" id="progressbar" role="progressbar"
+                             aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btn btn-lg btn-primary" style="background-color: midnightblue;width: 100%" data-dismiss="modal">Close</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
 <div style="background-color: midnightblue" class="container-fluid" style="height: 15px">
     <div class="col-xs-1">
         <img src="../Images/Logo.gif" class="img-fluid rounded float-left img-responsive" style="height: 75px !important;">
     </div>
     <div class="tab" style="float: left">
-        <button class="tablinks" href="#Home" onclick="projectNlp(event,'Home')">Home</button>
+        <button id="btnHome" class="tablinks" href="#Home" onclick="projectNlp(event,'Home')">Home</button>
         <button href="#About tablinks" onclick="projectNlp(event,'About')">About</button>
         <button href="#Contact tablinks" onclick="projectNlp(event,'Contact')">Contact</button>
     </div>
@@ -159,16 +190,11 @@
     <br>
     <br>
 <div class="container">
-    <div class="progress" id="progress">
-        <div class="progress-bar progress-bar-info" id="progressbar" role="progressbar"
-             aria-valuemin="0" aria-valuemax="100">
-        </div>
-    </div>
 
-    <h2 align="center">Enter Your Answers for below Questions</h2>
+   <!-- <h2 align="center">Enter Your Answers for below Questions</h2>-->
     <div ng-repeat="data in response">
         <form class="container" style="align-self: center;height:100%;width: 100%; background-color: white">
-            <p style="font-size: 200%">Question {{data.question_id}} : {{data.question}}</p>
+            <p style="font-size: 200%;text-align: left">Question {{data.question_id}} : {{data.question}}</p>
         <input type="text" id="answers-{{data.question_id}}" style="width:100%;height: 50px"
                name="answer" placeholder="Enter your Answer" required>
         <input type="submit" value="Evaluate" ng-click="Evaluate(data.question_id)">

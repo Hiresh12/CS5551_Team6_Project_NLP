@@ -158,6 +158,9 @@ function AnswerEval($scope,$http,qid){
         }
         score=score*10;
         //console.log(score);
+        //console.log(Question.answer);
+        $('#txtanswer').text(Question.answer);
         document.getElementById('progressbar').style.width=score+'%';
         document.getElementById('progressbar').innerText=score+'% correct';
+        document.getElementById('getAnswer').click();
     }
