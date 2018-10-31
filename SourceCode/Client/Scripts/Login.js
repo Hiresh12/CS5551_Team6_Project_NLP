@@ -65,7 +65,7 @@ loginApp.controller('FBcontroller',function ($scope,$http) {
                     console.log("document is " + document);
                 }
                 else {
-
+                    alert("Username is not available");
                     console.log("Username is not available");
                 }
             }, function (err) {
