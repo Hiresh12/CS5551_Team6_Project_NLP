@@ -139,6 +139,25 @@ var insertQuestionDetails = function (db, data, callback) {
         callback();
     });
 };
+app.delete('/answers/delete',function (req, res) {
+    let questionId = req.query.questionId;
+    MongoClient.connect(url, function (err, db) {
+        if (err) {
+            res.write("Failed, Error while connecting to Database");
+            res.end();
+        }
+        if (err) throw err;
+        var dbo = db.db("nlp_database");
+        dbo.collection("answers").deleteOne
+        ({
+            "questionId": parseInt(questionId)
+        }, function (err, result) {
+            if (err) throw err;
+            db.close();
+            res.json(result);
+        });
+    });
+})
 
 // catch 404 and forward to error handler
     app.use(function (req, res, next) {

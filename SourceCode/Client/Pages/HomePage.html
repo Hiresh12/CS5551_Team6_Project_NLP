@@ -65,11 +65,6 @@
         }
     </style>
     <script>
-        /*$(document).ready(function(){
-            document.getElementById('progressbar').style.width='60%';
-            document.getElementById('progressbar').innerText='60% correct';
-
-        });*/
         function preback(){(window.history.forward());}
         setTimeout("preback()",0)
         window.onunload=function () {
@@ -128,6 +123,10 @@
                         'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
                     }
                 }
+                var reqDelete = $http.delete('http://127.0.0.1:3000/answers/delete?questionId='+qId)
+                    .then(function(data,status,header,config){
+                    console.log(data);
+                })
                 var req = $http.post('http://127.0.0.1:3000/answers/create',dataParams)
                     .then(function(data, status, headers, config) {
                     $scope.message = data;
@@ -204,15 +203,6 @@
 </div>
     <div id="Contact" style="width: 100%" align="center" class="tabcontent">
     <h1 align="center" style="font-size: 50px">Team Details</h1>
-       <!-- <div style="text-align: center">
-                    <img height="250px" src="../Images/Anvesh.jpg">
-                     <p style="font-size: 25px">ClassId:34</p>
-            <p style="font-size: 25px">amngb@mail.umkc.edu</p>
-                    <img height="250px" src="../Images/Hiresh.jpg">
-            <p style="font-size: 25px">ClassId:17</p>
-            <p style="font-size: 25px">hj7k6@mail.umkc.edu</p>
-        </div>
--->
         <table align="center">
             <tr>
                 <td > <img height="250px" src="../Images/Anvesh.jpg"></td>
