@@ -19,10 +19,9 @@ module.exports = function(config) {
         'node_modules/angular-mocks/angular-mocks.js',
         'js/*.js',
         '*.js',
-        'www/js/*.js'
+        'www/js/*.js',
+        'Client/UnitTesting/homePageTest.js'
     ],
-
-
     // list of files / patterns to exclude
     exclude: [
     ],
