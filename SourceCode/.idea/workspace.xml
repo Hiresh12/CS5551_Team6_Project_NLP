@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3473694e-31b5-4a93-9173-1bc2208a0fa0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Client/UnitTesting/homePageTest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/UnitTesting/loginPageTest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Pages/RegisterPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Pages/RegisterPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Scripts/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Scripts/Signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Scripts/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Scripts/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/karma.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/karma.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -138,71 +143,67 @@
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.vcs.git.usages" />
     </session>
+    <session id="276457585">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="html" value="2" />
+          <entry key="js" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="2" />
+          <entry key="JavaScript" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="30" />
+          <entry key="js" value="447" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="30" />
+          <entry key="JavaScript" value="447" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server/app.js">
+        <entry file="file://$PROJECT_DIR$/Client/Scripts/Signup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2584">
-              <caret line="152" column="46" selection-start-line="152" selection-start-column="46" selection-end-line="152" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Client/Pages/LoginPage.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Client/Pages/HomePage.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="92" column="38" selection-start-line="92" selection-start-column="24" selection-end-line="92" selection-end-column="38" />
-              <folding>
-                <element signature="n#style#0;n#button#0;n#td#0;n#tr#2;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#form#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#form#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h1#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#2;n#tr#1;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#3;n#tr#1;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state>
+              <caret column="24" lean-forward="true" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Client/UnitTesting/homePageTest.js">
+        <entry file="file://$PROJECT_DIR$/Client/Scripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+            <state relative-caret-position="425">
+              <caret line="59" column="36" lean-forward="true" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/karma.conf.js">
+        <entry file="file://$PROJECT_DIR$/Client/Pages/RegisterPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+            <state relative-caret-position="207">
+              <caret line="52" column="21" lean-forward="true" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="48" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -236,11 +237,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Server/model/answers.js" />
-        <option value="$PROJECT_DIR$/Client/Pages/RegisterPage.html" />
         <option value="$PROJECT_DIR$/Server/routes/questions.js" />
         <option value="$PROJECT_DIR$/Server/routes/answers.js" />
         <option value="$PROJECT_DIR$/Server/model/questions.js" />
-        <option value="$PROJECT_DIR$/Client/Scripts/app.js" />
         <option value="$PROJECT_DIR$/Client/Pages/LoginPage.html" />
         <option value="$PROJECT_DIR$/Client/Pages/AdminLogin.html" />
         <option value="$PROJECT_DIR$/Client/newStyle.css" />
@@ -248,10 +247,14 @@
         <option value="$PROJECT_DIR$/Server/controllers/external/index.js" />
         <option value="$PROJECT_DIR$/Client/Scripts/Evaluation.js" />
         <option value="$PROJECT_DIR$/Client/Scripts/Login.js" />
-        <option value="$PROJECT_DIR$/Server/app.js" />
         <option value="$PROJECT_DIR$/Client/Pages/HomePage.html" />
-        <option value="$PROJECT_DIR$/karma.conf.js" />
         <option value="$PROJECT_DIR$/Client/UnitTesting/homePageTest.js" />
+        <option value="$PROJECT_DIR$/Server/app.js" />
+        <option value="$PROJECT_DIR$/Client/UnitTesting/loginPageTest.js" />
+        <option value="$PROJECT_DIR$/karma.conf.js" />
+        <option value="$PROJECT_DIR$/Client/Pages/RegisterPage.html" />
+        <option value="$PROJECT_DIR$/Client/Scripts/Signup.js" />
+        <option value="$PROJECT_DIR$/Client/Scripts/app.js" />
       </list>
     </option>
   </component>
@@ -267,13 +270,100 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/Server/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/ajv/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/angular-mocks/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/angular/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/asn1/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/assert-plus/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/asynckit/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/aws-sign2/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/aws4/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/bcrypt-pbkdf/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/buffer-from/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/caseless/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/combined-stream/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/concat-stream/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/core-util-is/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/dashdash/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/debug/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/delayed-stream/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/ecc-jsbn/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/es6-promise/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/extend/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/extract-zip/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/extsprintf/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/fast-deep-equal/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/fast-json-stable-stringify/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/fd-slicer/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/forever-agent/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/form-data/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/fs-extra/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/getpass/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/graceful-fs/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/har-schema/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/har-validator/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/hasha/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/http-signature/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/inherits/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/is-stream/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/is-typedarray/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/isarray/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/isexe/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/isstream/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/jasmine-core/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/jsbn/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/json-schema-traverse/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/json-schema/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/json-stringify-safe/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/jsonfile/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/jsprim/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/karma-jasmine/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/karma-phantomjs-launcher/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/kew/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/klaw/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/lodash/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/mime-db/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/mime-types/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/minimist/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/mkdirp/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/ms/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/oauth-sign/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/pend/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/performance-now/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/phantomjs-prebuilt/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/pinkie-promise/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/pinkie/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/process-nextick-args/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/progress/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/psl/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/punycode/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/qs/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/readable-stream/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/request-progress/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/request/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/safe-buffer/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/safer-buffer/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/sshpk/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/string_decoder/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/throttleit/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/tough-cookie/node_modules/punycode/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/tough-cookie/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/tunnel-agent/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/tweetnacl/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/typedarray/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/uri-js/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/util-deprecate/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/uuid/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/verror/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/which/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/yauzl/package.json" />
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="6" />
+    <option name="x" value="5" />
     <option name="y" value="40" />
     <option name="width" value="1380" />
-    <option name="height" value="788" />
+    <option name="height" value="789" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -281,6 +371,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -297,13 +388,29 @@
               <item name="SourceCode" type="b2602c69:ProjectViewProjectNode" />
               <item name="SourceCode" type="462c0819:PsiDirectoryNode" />
               <item name="Client" type="462c0819:PsiDirectoryNode" />
+              <item name="Pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SourceCode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SourceCode" type="462c0819:PsiDirectoryNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
+              <item name="Scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SourceCode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SourceCode" type="462c0819:PsiDirectoryNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
               <item name="UnitTesting" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SourceCode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SourceCode" type="462c0819:PsiDirectoryNode" />
+              <item name="Server" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -313,6 +420,7 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -389,17 +497,18 @@
       <workItem from="1541273918704" duration="211000" />
       <workItem from="1543601907926" duration="2796000" />
       <workItem from="1543612671540" duration="1064000" />
+      <workItem from="1543623009517" duration="6245000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98480000" />
+    <option name="totallyTimeSpent" value="104725000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20535715" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20489095" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -411,7 +520,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.29787233" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.29745042" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -516,13 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/Scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="23" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Client/Scripts/Evaluation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3332">
@@ -530,45 +632,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/Scripts/Signup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="32" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/Pages/RegisterPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="52" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/Scripts/Login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-727">
-          <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Server/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2584">
-          <caret line="152" column="46" selection-start-line="152" selection-start-column="46" selection-end-line="152" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/Pages/LoginPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        <state relative-caret-position="105">
+          <caret line="118" column="32" selection-start-line="118" selection-start-column="32" selection-end-line="118" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Client/Pages/HomePage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="92" column="38" selection-start-line="92" selection-start-column="24" selection-end-line="92" selection-end-column="38" />
+        <state relative-caret-position="373">
+          <caret line="107" column="15" lean-forward="true" selection-start-line="103" selection-start-column="12" selection-end-line="107" selection-end-column="15" />
           <folding>
             <element signature="n#style#0;n#button#0;n#td#0;n#tr#2;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -591,20 +665,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Client/UnitTesting/homePageTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="63" selection-start-line="16" selection-start-column="63" selection-end-line="16" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/Scripts/Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="58" column="25" lean-forward="true" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/Pages/LoginPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="15" column="40" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/UnitTesting/loginPageTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/karma.conf.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+        <state relative-caret-position="374">
+          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/UnitTesting/homePageTest.js">
+    <entry file="file://$PROJECT_DIR$/Client/Scripts/Signup.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+        <state>
+          <caret column="24" lean-forward="true" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/Pages/RegisterPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="52" column="21" lean-forward="true" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="48" />
+          <folding>
+            <element signature="n#style#0;n#label#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/typedarray/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/Scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="59" column="36" lean-forward="true" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
         </state>
       </provider>
     </entry>

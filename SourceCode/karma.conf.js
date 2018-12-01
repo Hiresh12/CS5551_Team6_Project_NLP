@@ -20,7 +20,8 @@ module.exports = function(config) {
         'js/*.js',
         '*.js',
         'www/js/*.js',
-        'Client/UnitTesting/homePageTest.js'
+        'Client/UnitTesting/homePageTest.js',
+        'Client/UnitTesting/loginPageTest.js'
     ],
     // list of files / patterns to exclude
     exclude: [

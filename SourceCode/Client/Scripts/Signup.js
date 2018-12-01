@@ -33,31 +33,4 @@ app.controller('Signupcontroller',function ($scope,$http){
             }
         }
     }
-})
-function ValidateUserDetails(Name,username,password,confirmpassword) {
-    //Signup - storing user details in local storage
-    //Created by : Hiresh
-    //Created Date : 09-17-2018
-
-    //Validation Starts
-    var missingValues = "";
-    if (Name == null || Name == "") {
-        missingValues = missingValues + "Name,";
-    }
-    if (username == null || username == "") {
-        missingValues = missingValues + "Username,";
-    }
-    if (password == null || password == "") {
-        missingValues = missingValues + "Password,";
-    }
-    if (confirmpassword == null || confirmpassword == "") {
-        missingValues = missingValues + "Confirm Password,";
-    }
-    if (missingValues != null && missingValues != "") {
-        return "Please Enter :" + missingValues.substr(0,missingValues.length-1);
-    }
-    else
-    {
-        return "";
-    }
-}
+});

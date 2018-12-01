@@ -32,19 +32,19 @@
                 <th class="text-center" colspan="2"><label style="font-size: 25px;color: midnightblue">Sign up</label></th>
                 <tr>
                     <td><label style="font-size: 16px;color: midnightblue">Name</label></td>
-                    <td><input ng-model="txtName" class="form-control" type="text"></td>
+                    <td><input ng-model="txtName" class="form-control" type="text" required></td>
                 </tr>
                 <tr>
                     <td><label style="font-size: 16px;color: midnightblue">Username/Email</label></td>
-                    <td><input ng-model="txtUsername" class="form-control" type="text"></td>
+                    <td><input ng-model="txtUsername" class="form-control"  style="text-transform:lowercase" type="text" required></td>
                 </tr>
                 <tr>
                     <td><label style="font-size: 16px;color: midnightblue">Password</label></td>
-                    <td><input ng-model="txtPassword" class="form-control" type="password"></td>
+                    <td><input ng-model="txtPassword" class="form-control" type="password" required></td>
                 </tr>
                 <tr>
                     <td><label style="font-size: 16px;color: midnightblue">Confirm Password</label></td>
-                    <td><input ng-model="txtConfirmpassword" class="form-control" type="password"></td>
+                    <td><input ng-model="txtConfirmpassword" class="form-control" type="password" required></td>
                 </tr>
                 <tr>
                     <td><button ng-click="insertData()" style="color: white;background-color:midnightblue;" class="form-control" class="btn" style="width: 100%">
@@ -56,5 +56,6 @@
     </div>
 </div>
 <script type="text/javascript" src="../Scripts/app.js"></script>
+<script type="text/javascript" src="../Scripts/Signup.js"></script>
 </body>
 </html>

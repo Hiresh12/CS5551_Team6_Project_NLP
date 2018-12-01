@@ -116,6 +116,24 @@ app.get('/questions/search', function (req, res) {
     });
 });
 
+app.get('/registerDetails/search', function (req, res) {
+    MongoClient.connect(url, function (err, db) {
+        if (err) {
+            res.write("Failed, Error while cosnnecting to Database");
+            res.end();
+        }
+        if (err) throw err;
+        var dbo = db.db("nlp_database");
+        dbo.collection("registerDetails").find({}).toArray(function (err, result) {
+            if (err) throw err;
+            // console.log(result[0].major);
+            db.close();
+            res.json(result);
+        });
+    });
+});
+
+
 app.post('/questions/create', function (req, res) {
     MongoClient.connect(url, function (err, client) {
         if (err) {
