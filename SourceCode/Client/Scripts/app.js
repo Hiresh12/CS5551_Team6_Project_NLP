@@ -48,14 +48,13 @@ myapp.controller('MongoRestController',function($scope,$http,$window){
         else if(password!=confirmpassword){
             return "Password and Confirm password should match";
         }
-        else
-        {
+        else {
             return "";
         }
     }
         $scope.insertData = function(){
             var errormessage=ValidateUserDetails($scope.txtName,$scope.txtUsername,$scope.txtPassword,$scope.txtConfirmpassword);
-            if(errormessage!='' || errormessage!= null)
+            if(errormessage!='' && errormessage!= null && errormessage!=undefined)
             {
                 alert(errormessage);
                 return;
@@ -68,29 +67,28 @@ myapp.controller('MongoRestController',function($scope,$http,$window){
                         if (data.data[i].uaername == $scope.txtUsername) {
                             alert("Username Already Exists Please try with another Username");
                             return;
-                        }else{
-                            console.log($scope.txtName);
-                            var dataParams = {
-                                'name' : $scope.txtName,
-                                'uaername' : $scope.txtUsername,
-                                'password' : $scope.txtPassword,
-                                'confirmpassword' : $scope.txtConfirmpassword
-                            };
-                            var config = {
-                                headers : {
-                                    'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
-                                }
-                            }
-                            var req = $http.post('http://127.0.0.1:3000/enroll',dataParams)
-                                .then(function(data, status, headers, config) {
-                                    // $scope.message = data;
-                                    console.log("here "+data);
-                                    $window.location.href = 'LoginPage.html';
-                                    alert('Registartion Successful Please Login');
-                                });
                         }
                     }
                 }
+                console.log($scope.txtName);
+                var dataParams = {
+                    'name' : $scope.txtName,
+                    'uaername' : $scope.txtUsername,
+                    'password' : $scope.txtPassword,
+                    'confirmpassword' : $scope.txtConfirmpassword
+                };
+                var config = {
+                    headers : {
+                        'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
+                    }
+                }
+                var req = $http.post('http://127.0.0.1:3000/enroll',dataParams)
+                    .then(function(data, status, headers, config) {
+                        // $scope.message = data;
+                        console.log("here "+data);
+                        $window.location.href = 'LoginPage.html';
+                        alert('Registartion Successful Please Login');
+                    });
             });
         };
 
