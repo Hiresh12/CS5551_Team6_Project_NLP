@@ -7,17 +7,6 @@ window.fbAsyncInit = function() {
         version    : 'v2.8',
         status     : true
     });
-
-   /* FB.getLoginStatus(function(response){
-        if(response.status=='connected')
-        {
-        }else if(response.status='not_authorized')
-        {
-
-        }else{
-
-        }
-    })*/
 };
 
 (function(d, s, id){
@@ -37,26 +26,72 @@ myapp.run(function ($http) {
     $http.defaults.headers.post['dataType'] = 'json'
 });
 myapp.controller('MongoRestController',function($scope,$http,$window){
+    function ValidateUserDetails(Name,username,password,confirmpassword) {
+        var missingValues = "";
+        console.log('check'+Name);
+        if (Name == null || Name == "" || Name==undefined) {
+            missingValues = missingValues + "Name,";
+        }
+        if (username == null || username == "" || username==undefined) {
+            missingValues = missingValues + "Username,";
+        }
+        if (password == null || password == "" || password==undefined) {
+            missingValues = missingValues + "Password,";
+        }
+        if (confirmpassword == null || confirmpassword == "" || confirmpassword==undefined) {
+            missingValues = missingValues + "Confirm Password,";
+        }
+
+        if (missingValues != null && missingValues != "") {
+            return "Please Enter :" + missingValues.substr(0,missingValues.length-1);
+        }
+        else if(password!=confirmpassword){
+            return "Password and Confirm password should match";
+        }
+        else
+        {
+            return "";
+        }
+    }
         $scope.insertData = function(){
-            console.log($scope.txtName);
-            var dataParams = {
-                'name' : $scope.txtName,
-                'uaername' : $scope.txtUsername,
-                'password' : $scope.txtPassword,
-                'confirmpassword' : $scope.txtConfirmpassword
-            };
-            var config = {
-                headers : {
-                    'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
-                }
+            var errormessage=ValidateUserDetails($scope.txtName,$scope.txtUsername,$scope.txtPassword,$scope.txtConfirmpassword);
+            if(errormessage!='' || errormessage!= null)
+            {
+                alert(errormessage);
+                return;
             }
-            var req = $http.post('http://127.0.0.1:3000/enroll',dataParams)
-                .then(function(data, status, headers, config) {
-                    // $scope.message = data;
-                    console.log("here "+data);
-                    $window.location.href = 'LoginPage.html';
-                    alert('Registartion Successful Please Login');
-                });
+            var query='http://127.0.0.1:3000/registerDetails/search'
+            $http.get(query).then(function(data) {
+                console.log(data);
+                if (data.data.length != 0) {
+                    for (i = 0; i < data.data.length; i++) {
+                        if (data.data[i].uaername == $scope.txtUsername) {
+                            alert("Username Already Exists Please try with another Username");
+                            return;
+                        }else{
+                            console.log($scope.txtName);
+                            var dataParams = {
+                                'name' : $scope.txtName,
+                                'uaername' : $scope.txtUsername,
+                                'password' : $scope.txtPassword,
+                                'confirmpassword' : $scope.txtConfirmpassword
+                            };
+                            var config = {
+                                headers : {
+                                    'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
+                                }
+                            }
+                            var req = $http.post('http://127.0.0.1:3000/enroll',dataParams)
+                                .then(function(data, status, headers, config) {
+                                    // $scope.message = data;
+                                    console.log("here "+data);
+                                    //$window.location.href = 'LoginPage.html';
+                                    alert('Registartion Successful Please Login');
+                                });
+                        }
+                    }
+                }
+            });
         };
 
     }
