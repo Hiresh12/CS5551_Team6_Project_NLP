@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3473694e-31b5-4a93-9173-1bc2208a0fa0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/public/Pages/HomePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Server/public/Pages/HomePage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/public/Scripts/Evaluation.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/public/Scripts/Evaluation.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -190,7 +188,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Server/public/Scripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1428">
+            <state relative-caret-position="145">
               <caret line="84" column="38" selection-start-line="84" selection-start-column="38" selection-end-line="84" selection-end-column="38" />
             </state>
           </provider>
@@ -199,8 +197,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Server/public/Pages/LoginPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1598">
-              <caret line="94" column="51" selection-start-line="94" selection-start-column="51" selection-end-line="94" selection-end-column="51" />
+            <state relative-caret-position="451">
+              <caret line="96" column="43" lean-forward="true" selection-start-line="96" selection-start-column="43" selection-end-line="96" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -214,19 +212,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Server/public/Pages/HomePage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="125" column="106" selection-start-line="125" selection-start-column="106" selection-end-line="125" selection-end-column="106" />
+            <state relative-caret-position="170">
+              <caret line="125" column="62" lean-forward="true" selection-start-line="125" selection-start-column="62" selection-end-line="125" selection-end-column="62" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Server/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
+            <state relative-caret-position="264">
               <caret line="172" column="12" selection-start-line="172" selection-start-column="12" selection-end-line="172" selection-end-column="12" />
             </state>
           </provider>
@@ -285,8 +283,8 @@
         <option value="$PROJECT_DIR$/Server/public/Pages/LoginPage.html" />
         <option value="$PROJECT_DIR$/Client/Scripts/Login.js" />
         <option value="$PROJECT_DIR$/Server/public/Scripts/Login.js" />
-        <option value="$PROJECT_DIR$/Server/public/Pages/HomePage.html" />
         <option value="$PROJECT_DIR$/Server/app.js" />
+        <option value="$PROJECT_DIR$/Server/public/Pages/HomePage.html" />
       </list>
     </option>
   </component>
@@ -534,12 +532,12 @@
       <workItem from="1543612671540" duration="1064000" />
       <workItem from="1543623009517" duration="6245000" />
       <workItem from="1543778819087" duration="13836000" />
-      <workItem from="1543857521535" duration="367000" />
+      <workItem from="1543857521535" duration="1470000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134460000" />
+    <option name="totallyTimeSpent" value="135563000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -706,20 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/public/Scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="84" column="38" selection-start-line="84" selection-start-column="38" selection-end-line="84" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/public/Pages/LoginPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1598">
-          <caret line="94" column="51" selection-start-line="94" selection-start-column="51" selection-end-line="94" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Server/public/Scripts/Login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -727,17 +711,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/public/Pages/HomePage.html">
+    <entry file="file://$PROJECT_DIR$/Server/public/Pages/LoginPage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="125" column="106" selection-start-line="125" selection-start-column="106" selection-end-line="125" selection-end-column="106" />
+        <state relative-caret-position="451">
+          <caret line="96" column="43" lean-forward="true" selection-start-line="96" selection-start-column="43" selection-end-line="96" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/public/Scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="84" column="38" selection-start-line="84" selection-start-column="38" selection-end-line="84" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="264">
           <caret line="172" column="12" selection-start-line="172" selection-start-column="12" selection-end-line="172" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/public/Pages/HomePage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="125" column="62" lean-forward="true" selection-start-line="125" selection-start-column="62" selection-end-line="125" selection-end-column="62" />
         </state>
       </provider>
     </entry>

@@ -123,7 +123,7 @@
                         'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
                     }
                 }
-                var reqDelete = $http.delete('/answers/delete??userId='+$scope.userName+'&questionId='+qId)
+                var reqDelete = $http.delete('/answers/delete?userId='+$scope.userName+'&questionId='+qId)
                     .then(function(data,status,header,config){
                     console.log(data);
                 })
