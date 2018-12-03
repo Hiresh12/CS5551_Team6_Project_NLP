@@ -39,9 +39,9 @@ function CheckUser(scope)
 var loginApp = angular.module('LoginApp', []);
 loginApp.controller('FBcontroller',function ($scope,$http) {
     $scope.getDbData = function(){
-        if(($scope.txtUsername='' || $scope.txtUsername==undefined) &&($scope.txtPassword=''
+        if(($scope.txtUsername=='' || $scope.txtUsername==undefined) &&($scope.txtPassword==''
             ||  $scope.txtPassword==undefined)){
-            alert("Please Enter UserName and Password");
+           alert("Please Enter UserName and Password");
             return;
         }
         $http.get('/getData?keywords=' + $scope.txtUsername).then(function (d) {
