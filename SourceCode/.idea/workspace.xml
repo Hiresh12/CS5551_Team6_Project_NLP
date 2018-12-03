@@ -2,7 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3473694e-31b5-4a93-9173-1bc2208a0fa0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Server/public/Pages/LoginPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Server/public/Pages/LoginPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/.idea/SourceCode.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Images/Anvesh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Images/Bharath.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Images/Hiresh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Images/HomePage.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Images/HomePic.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Images/Logo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Images/Prakash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Images/admin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Images/page-under-construction.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Pages/AdminLogin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Pages/AdminPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Pages/HomePage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Pages/LoginPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Pages/RegisterPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Scripts/Evaluation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Scripts/Login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Scripts/Signup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Scripts/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/UnitTesting/homePageTest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/UnitTesting/loginPageTest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/newStyle.css" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,7 +43,7 @@
     <session id="-1979713882">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="19" />
+          <entry key="project.closed" value="20" />
           <entry key="project.open.time.0" value="8" />
           <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.10" value="1" />
@@ -34,13 +60,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="2384" />
-          <entry key="js" value="1888" />
+          <entry key="js" value="1919" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="2384" />
-          <entry key="JavaScript" value="1888" />
+          <entry key="JavaScript" value="1919" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -51,7 +77,7 @@
           <entry key="html" value="19" />
           <entry key="jpeg" value="1" />
           <entry key="jpg" value="1" />
-          <entry key="js" value="45" />
+          <entry key="js" value="46" />
           <entry key="json" value="2" />
         </counts>
       </usages-collector>
@@ -62,7 +88,7 @@
           <entry key="HTML" value="19" />
           <entry key="Image" value="3" />
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="45" />
+          <entry key="JavaScript" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -195,28 +221,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Client/Scripts/Login.js">
+        <entry file="file://$PROJECT_DIR$/Server/public/Pages/LoginPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server/public/Scripts/Login.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+            <state relative-caret-position="111">
+              <caret line="94" column="51" lean-forward="true" selection-start-line="94" selection-start-column="51" selection-end-line="94" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Server/public/Pages/LoginPage.html">
+        <entry file="file://$PROJECT_DIR$/Server/public/Scripts/Login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+            <state relative-caret-position="168">
+              <caret line="43" column="11" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -241,6 +258,7 @@
       <find>Signupcontroller</find>
       <find>Evaluate</find>
       <find>127</find>
+      <find>txtUsername</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -259,7 +277,6 @@
         <option value="$PROJECT_DIR$/Client/Pages/AdminPage.html" />
         <option value="$PROJECT_DIR$/Server/controllers/external/index.js" />
         <option value="$PROJECT_DIR$/Client/Scripts/Evaluation.js" />
-        <option value="$PROJECT_DIR$/Client/Scripts/Login.js" />
         <option value="$PROJECT_DIR$/Client/Pages/HomePage.html" />
         <option value="$PROJECT_DIR$/Client/UnitTesting/homePageTest.js" />
         <option value="$PROJECT_DIR$/Client/UnitTesting/loginPageTest.js" />
@@ -269,12 +286,13 @@
         <option value="$PROJECT_DIR$/Client/Scripts/app.js" />
         <option value="$PROJECT_DIR$/Server/public/Pages/AdminPage.html" />
         <option value="$PROJECT_DIR$/Server/public/Scripts/app.js" />
-        <option value="$PROJECT_DIR$/Server/public/Scripts/Login.js" />
         <option value="$PROJECT_DIR$/Server/public/index.html" />
         <option value="$PROJECT_DIR$/Server/app.js" />
         <option value="$PROJECT_DIR$/Server/public/Pages/HomePage.html" />
         <option value="$PROJECT_DIR$/Server/public/Scripts/Evaluation.js" />
         <option value="$PROJECT_DIR$/Server/public/Pages/LoginPage.html" />
+        <option value="$PROJECT_DIR$/Client/Scripts/Login.js" />
+        <option value="$PROJECT_DIR$/Server/public/Scripts/Login.js" />
       </list>
     </option>
   </component>
@@ -458,8 +476,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.LoginPage.html">
+  <component name="RunManager" selected="JavaScript Debug.LoginPage.html (1)">
     <configuration name="HomePage.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/SourceCode/Client/Pages/HomePage.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="LoginPage.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/SourceCode/Server/public/Pages/LoginPage.html">
       <method v="2" />
     </configuration>
     <configuration name="LoginPage.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/SourceCode/Client/Pages/LoginPage.html">
@@ -472,9 +493,11 @@
       <item itemvalue="JavaScript Debug.HomePage.html" />
       <item itemvalue="JavaScript Debug.LoginPage.html" />
       <item itemvalue="JavaScript Debug.RegisterPage.html" />
+      <item itemvalue="JavaScript Debug.LoginPage.html (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.LoginPage.html (1)" />
         <item itemvalue="JavaScript Debug.LoginPage.html" />
         <item itemvalue="JavaScript Debug.HomePage.html" />
         <item itemvalue="JavaScript Debug.RegisterPage.html" />
@@ -521,13 +544,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132403000" />
+    <option name="totallyTimeSpent" value="134093000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20535715" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20535715" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -539,7 +561,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.2618658" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.2618658" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -651,13 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/Scripts/Login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Client/UnitTesting/loginPageTest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -722,13 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/public/Scripts/Login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Server/public/Scripts/Signup.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-25" />
@@ -773,13 +781,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/public/Scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="84" column="38" selection-start-line="84" selection-start-column="38" selection-end-line="84" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Server/public/Scripts/Evaluation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -794,10 +795,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Client/Scripts/Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Server/public/Pages/LoginPage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+        <state relative-caret-position="111">
+          <caret line="94" column="51" lean-forward="true" selection-start-line="94" selection-start-column="51" selection-end-line="94" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/public/Scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="84" column="38" selection-start-line="84" selection-start-column="38" selection-end-line="84" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/public/Scripts/Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="43" column="11" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
         </state>
       </provider>
     </entry>
