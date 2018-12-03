@@ -19,6 +19,9 @@
                     alert("Please check the details");
                 }
             }
+            $scope.redtoHome=function() {
+                window.location.href="LoginPage.html";
+            }
         })
     </script>
 
@@ -65,12 +68,14 @@
     <link rel="stylesheet" href="app.css">
 </head>
 <body ng-app="LoginApp" ng-controller="logincontroller">
+
 <div>
     <form>
         <img src="../Images/admin.png"/>
         <input type="text" name="" placeholder="Enter User Name" ng-model="txtUsername" required />
         <input type="password" name="" placeholder="password"  ng-model="txtPassword"  required />
-        <button  class="form-control" style="color: white;background-color: #53cfff" id="login" ng-click="AppLogin()"><strong>Login</strong></button>
+        <button  class="form-control" style="color: white;background-color: black" id="login" ng-click="AppLogin()"><strong>Login</strong></button>
+        <button  class="form-control" style="color: white;background-color: red" id="gotoHome" ng-click="redtoHome()"><strong>Redirect to Home Login</strong></button>
     </form>
 </div>
 

@@ -116,6 +116,46 @@ app.get('/questions/search', function (req, res) {
     });
 });
 
+app.get('/question/delete',function (req, res) {
+    let questionId = req.query.qid;
+    MongoClient.connect(url, function (err, db) {
+        if (err) {
+            res.write("Failed, Error while connecting to Database");
+            res.end();
+        }
+        if (err) throw err;
+        var dbo = db.db("nlp_database");
+        dbo.collection("questions").deleteOne
+        ({
+            "question_id": parseInt(questionId)
+        }, function (err, result) {
+            if (err) throw err;
+            db.close();
+            res.json(result);
+        });
+    });
+});
+
+app.get('/queskeys/search',(req,res)=>{
+    var search_text = req.query.srch;
+    console.log(search_text);
+    MongoClient.connect(url, function (err, db) {
+        if (err) {
+            res.write("Failed, Error while connecting to Database");
+            res.end();
+        }
+        if (err) throw err;
+        var dbo = db.db("nlp_database");
+        dbo.collection("questions").find({question:{ $regex: search_text, $options: 'i' }}).toArray(function (err, result) {
+            if (err) throw err;
+            // console.log(result[0].major);
+            db.close();
+            res.json(result);
+        });
+    });
+
+});
+
 app.get('/registerDetails/search', function (req, res) {
     MongoClient.connect(url, function (err, db) {
         if (err) {
