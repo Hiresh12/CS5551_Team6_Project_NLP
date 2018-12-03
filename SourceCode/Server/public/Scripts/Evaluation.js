@@ -1,5 +1,5 @@
 var student;var tutor;var keyword;var keys='';var keywords;var result;var keyNotinAns;var ansNotinKey;
-    var foundinAns;var useranswer;var foundinKey;
+    var foundinAns;var useranswer;var foundinKey;var http;var grammarError;
     var synonyms={
         synonyms:{}
     };
@@ -12,6 +12,12 @@ var student;var tutor;var keyword;var keys='';var keywords;var result;var keyNot
             {'id': 2, 'key': 'run on any OS', 'score': 5}]
     };*/
 var textAnalyze = function($scope,$http,qid) {
+    http=$http;
+    var txtSearch='object oriented programming';
+    var query1 = 'https://kgsearch.googleapis.com/v1/entities:search?query='+txtSearch.replace(' ','+')+'&key=AIzaSyC5YlF6OB7EVbG48qtWsyiYYsySPUlRyug&limit=10&indent=True';
+    $http.get(query1).then(function(data) {
+        console.log(data);
+    });
     var query='https://api.mlab.com/api/1/databases/nlp_database/collections/questions?apiKey=lSMpIYO_9GB-Gnslwjb-KPeyA4fc4hxb';
     $http.get(query+'&q={"question_id":'+qid+'}').then(function(data){
         Question=data.data[0];
@@ -163,9 +169,19 @@ function AnswerEval($scope,$http,qid){
             }
         }
         //console.log(keyNotinAns);
-        CalculateMarks();
+        grammerCheck();
     }
-
+    function grammerCheck() {
+        var query = 'https://api.textgears.com/check.php?text=' + useranswer.replace(' ', '+') + '&key=NUEMXNPjrK80zWef';
+        http.get(query).then(function (data) {
+            grammarError=0;
+            if(data.data.errors.length>0)
+            {
+                grammarError=data.data.errors.length;
+            }
+            CalculateMarks();
+        });
+    }
     function CalculateMarks()
     {
         //console.log(keywords);
@@ -209,6 +225,9 @@ function AnswerEval($scope,$http,qid){
         if(studentNegCount[0].count!=tutorNegCount[0].count)
         {
             score=(score<=2?0:score-2);
+        }
+        if(grammarError>0){
+            score=((score<=grammarError*0.5)?0:(score-(grammarError*0.5)));
         }
         score=score*10;
 
