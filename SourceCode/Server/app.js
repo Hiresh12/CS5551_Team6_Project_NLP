@@ -158,6 +158,7 @@ var insertQuestionDetails = function (db, data, callback) {
     });
 };
 app.delete('/answers/delete',function (req, res) {
+    let userId = req.query.userId;
     let questionId = req.query.questionId;
     MongoClient.connect(url, function (err, db) {
         if (err) {
@@ -168,7 +169,8 @@ app.delete('/answers/delete',function (req, res) {
         var dbo = db.db("nlp_database");
         dbo.collection("answers").deleteOne
         ({
-            "questionId": parseInt(questionId)
+            "questionId": parseInt(questionId),
+            "userId": userId
         }, function (err, result) {
             if (err) throw err;
             db.close();
