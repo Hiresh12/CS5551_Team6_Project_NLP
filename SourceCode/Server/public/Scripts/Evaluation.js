@@ -196,7 +196,10 @@ function AnswerEval($scope,$http,qid){
             missingKeys.push({a: swapKeys[i].a, b: swapKeys[i].b, score: swapKeys[i].score, count: swapKeys[i].count});
         }
 
-        
+        var studentNegCount =alasql('SELECT count(*) as `count` from ? as student where student.dependencyEdge.label="NEG"',
+            [student.data.tokens,tutor.data.tokens]);
+        var tutorNegCount =alasql('SELECT count(*) as `count` from ? as tutor where tutor.dependencyEdge.label="NEG"',
+            [tutor.data.tokens]);
 
         var score=10;
         for(var i=0;i<missingKeys.length;i++){
