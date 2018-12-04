@@ -78,6 +78,8 @@ loginApp.controller('FBcontroller',function ($scope,$http) {
                 if(response.authResponse) (
                     FB.api('/me','GET',{fields:'email,first_name,name,id'},function(response){
                         sessionStorage.FBName=response.name.toString();
+                        sessionStorage.setItem("username",response.email.toString());
+                        sessionStorage.setItem("name",response.name.toString());
                         window.location.href = "HomePage.html";
                     })
                 )
